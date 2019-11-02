@@ -19,7 +19,7 @@ Open the terminal and enter the following commands:
 
 ```bash
 user@pc:~$ cd python-tls
-user@pc:~/python-tls$ openssl req -new -x509 -days 365 -nodes -out cert.pem -keyout key.pem -subj "/C=BR/ST=Rio de Janeiro/L=Niteroi/O=UFF/OU=Midiacom/CN=127.0.0.1/emailAddress=arthurazs@midiacom.uff.br"
+user@pc:~/python-tls$ openssl req -new -x509 -days 365 -nodes -out cert.pem -keyout key.pem -subj "/C=BR/ST=Rio de Janeiro/L=Niteroi/O=UFF/OU=Midiacom/CN=example.org/emailAddress=arthurazs@midiacom.uff.br"
 ```
 
 The first command changes the directory to the downloaded repository, the second command generates the certificate and private key.
@@ -32,7 +32,7 @@ Note that you can change some parameters:
 - **O**, which is an organization name;
 - **OU** *(optional)*, which is an organizational unit name;
 - **CN**, which is the hostname:
-  - **Warning** If you change the **CN** value, you have to change the hostname under [server.py](server.py) and [client.py](client.py) to reflect the new hostname.
+  - **Warning** If you change the **CN** value, you have to change the hostname under [client.py](client.py) to reflect the new hostname.
 - **emailAddress** *(optional)*, which is an email address.
 
 ## Running the TLS connection example
